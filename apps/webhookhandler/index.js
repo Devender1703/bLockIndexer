@@ -1,5 +1,6 @@
-import polka from 'polka';
-import serverless from 'serverless-http';
+const polka = require('polka');
+const serverless = require('serverless-http');
+
 
 const app = polka();
 
@@ -33,5 +34,4 @@ app.get('/', (req, res) => {
   res.end('Hello from webhookhandler!');
 });
 
-
-export default serverless(app);
+module.exports = serverless(app);
