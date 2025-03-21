@@ -11,6 +11,7 @@
   "description": "",
   "type": "module",
   "dependencies": {
-    "polka": "^0.5.2"
+    "polka": "^0.5.2",
+    "serverless-http": "^3.2.0"
   }
 }

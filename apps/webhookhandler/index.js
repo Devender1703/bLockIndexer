@@ -18,4 +18,10 @@ app.get('/', (req, res) => {
   res.end('Hello from webhookhandler!');
 });
 
+
+app.listen(3000, err => {
+  if (err) throw err;
+  console.log('> Running on localhost:3000');
+});
+
 export default serverless(app);
