@@ -4,6 +4,7 @@ const app = express();
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
 app.post("/webhook", (req, res) => {
+    console.log(req);
     res.send(`data from request ${req.body}`)
 });
 
