@@ -8,8 +8,14 @@ app.get("/", (req, res) => {
     res.send("Express on Vercel")
 });
 
-app.post("/webhook", (req, res) => {
+app.post("/webhook", async (req, res) => {
     console.log(`check logs ${req.body}`)
+
+    await fetch("s1251143.eu-nbg-2.betterstackdata.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(req.body)
+    });
     res.send(`data from request ${JSON.stringify(req.body)}`)
 });
 
