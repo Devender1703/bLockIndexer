@@ -7,6 +7,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/webhook", (req, res) => {
+    console.log(`check logs ${req}`)
     res.send(`data from request ${req.body}`)
 });
 
